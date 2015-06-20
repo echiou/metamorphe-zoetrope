@@ -1,9 +1,9 @@
 # MetaMorphe Zoetrope #
-#### By: Timothy Campbell (@timcam) and Ethan Chiou (@echiou) ####
+#### By: [Timothy Campbell](http://github.com/timcam) and [Ethan Chiou](http://github.com/echiou) ####
 
 ![][main]
 
-A record player modified to present an application of Cesar Torres' (@cearto) MetaMorphe, namely the ability to interpolate keyframes from a programatically defined change in a 3D model. The record player, which rotates at around three times its built-in speeds (~99 and 135, instead of 33 and 45 rpm, respectively), has either 15 or 10 3D printed models placed on the turntable, and a xenon flash is fired at a corresponding rate to produce the illusion of animation.
+A record player modified to present an application of [Cesar Torres](http://github.com/cearto)' MetaMorphe, namely the ability to interpolate keyframes from a programatically defined change in a 3D model. The record player, which rotates at around three times its built-in speeds (~99 and 135, instead of 33 and 45 rpm, respectively), has either 15 or 10 3D printed models placed on the turntable, and a xenon flash is fired at a corresponding rate to produce the illusion of animation.
 
 ## How To Run It ##
 - Press power button to turn record player on.
@@ -18,7 +18,7 @@ A record player modified to present an application of Cesar Torres' (@cearto) Me
 
 #### Notes ####
 
-- .svg files for 10 and 15 frame plates can be found in the repository.
+-  for [10](./record-10.svg) and [15](./record-15.svg) frame plates can be found in the repository.
 - The turntable must reach full speed before you turn on the strobe because  firing the strobe light and accelerating the turntable simultaneously draws too much power.
 
 ## How We Made It ##

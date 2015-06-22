@@ -37,9 +37,9 @@ void loop() {
   if (lightOn == HIGH) {
     // Flash strobe
     digitalWrite(strobe, HIGH);
-    delay(1); // wait for a millisecond
+    delay(1); // Wait for a millisecond
     digitalWrite(strobe, LOW);
   }
 
-  delay(delayTime); //wait proper amount of time before flashing again
+  delay(delayTime); // Wait proper amount of time before flashing again
 }

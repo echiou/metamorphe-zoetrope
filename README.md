@@ -5,6 +5,8 @@
 
 A record player modified to demonstrate an application of [Cesar Torres](http://github.com/cearto)' MetaMorphe, namely the ability to interpolate keyframes from a programatically defined change in a 3D model. The record player, which rotates at around three times its built-in speeds (~99 and 135, instead of 33 and 45 rpm, respectively), has either 15 or 10 3D printed models placed on the turntable, and a xenon flash is fired at a corresponding rate to produce the illusion of animation.
 
+A video can be found [here](https://youtu.be/nmKtfB-Ih18).
+
 ## How To Run It ##
 - Press power button to turn record player on.
 - Select appropriate speed:

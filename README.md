@@ -60,7 +60,7 @@ Looking at the internals of the record player, we found an analog circuit board 
 
 ![][cog]
 
-Because we wanted to spin the turntable at three times its default speeds, we decided that instead of replacing the motor, we could simply fit a larger pully over the existing one, which would increase the speed of the larger turntable. Tim measured the diameter of the existing pulley and then tripled its size on the 3D printed retrofit. The Solidworks [file](./stroboscope-cog-rev1.SLDPRT) is in the repository. An explanation of crowned pulleys can be found [here](http://woodgears.ca/bandsaw/crowned_pulleys.html)
+Because we wanted to spin the turntable at three times its default speeds, we decided that instead of replacing the motor, we could simply fit a larger pully over the existing one, which would increase the speed of the larger turntable. Tim measured the diameter of the existing pulley and then tripled its size on the 3D printed retrofit. The Solidworks [file](./stroboscope-cog-rev1.SLDPRT) is in the repository. An good explanation of crowned pulleys can be found on [woodgears.ca](http://woodgears.ca/bandsaw/crowned_pulleys.html)
 
 ## Flash ##
 
@@ -76,7 +76,7 @@ In addition to powering the strobe light with the record player's power supply a
 
 ## Speed Control ##
 
-In order to find the speed at which the turntable was spinning (and thus at what rate to fire the strobe light), we initially had the idea of putting a Reed switch and a magnet in to find the rotations per minute (and actually cut a hole in the casing and hot glued the switch in) before we settled on a elegant solution: instead of adding lots of logic and components, we could use the built-in pitch control to adjust the speed of the turntable ever so slightly while we fired the flash at a constant rate.
+In order to find the speed at which the turntable was spinning (and thus at what rate to fire the strobe light), we initially had the idea of putting a Reed switch and a magnet under the turntable find the rotations per minute (and actually cut a hole in the casing and hot glued the switch in). Then we settled on a elegant solution: instead of adding lots of logic and components, we could use the built-in pitch control to adjust the speed of the turntable ever so slightly while we fired the flash at a constant rate. This required no additional electronics or modification. 
 
 #### Different Built-in Speeds ####
 
@@ -88,17 +88,17 @@ The record player also came with two default speeds, the faster of which we used
 
 ![][33 switch]
 
-Our intuition was to try to read the voltage from the LEDs indicating at which speed the turntable was turning, but the voltages which we were getting were confusing (and in the process we managed to burn out several LEDs as well as an Arduino), so we instead changed to reading the actual switch's value. Instead of dealing with the same switch as the record player's circuit board, we chose an unused one, and simply read the signal from there.
+Our intuition was to try to read the voltage from the LEDs indicating at which speed the turntable was turning, but the voltages which we were getting were confusing (and in the process we managed to burn out several LEDs as well as an Arduino). Instead of dealing with the same switch as the record player's circuit board, we chose an unused one, and simply read the signal from there. The unused switch was connected mechanically but not electrically to the other switch, thus saving the confusing voltage. 
 
 ## Circuitry and Programming ##
 
 ![][arduino]
 
-My Arduino code can be found [here](./MetaMorpheZoetrope/MetaMorpheZoetrope.ino). It essentially fires the flash at a constant delay if the on/off button is pressed, changing the delay depending on the current speed of the turntable.
+My Arduino code can be found [here](./MetaMorpheZoetrope/MetaMorpheZoetrope.ino). It essentially fires the flash at a constant delay if the on/off button is pressed, changing the delay depending on the current speed of the turntable. We initially thought there would be much more programming involved but the record player had so much existing functionality that only timing the strobe was necessary. 
 
 ![][circuit board]
 
-The perma-proto board contains wires to the arduino, as well as wires to the switch detecting the current turntable speed, the button to turn the strobe on and off, and the strobe itself. There is also a switch connected to it that we used to turn the strobe on and off before putting the button in.
+The perma-proto board contains wires to the arduino, as well as wires to the switch detecting the current turntable speed, the button to turn the strobe on and off, and the strobe itself. There is also a switch connected to it that we used to turn the strobe on and off before putting the button in. We hot-glued stand-offs to the underside of the top case and then screwed the Arduino and protoboard into them. 
 
 [main]: ./pictures/main.jpg
 [exterior]: ./pictures/exterior.jpg "The exterior of the final result."

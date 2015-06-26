@@ -41,7 +41,7 @@ A video can be found [here](https://youtu.be/nmKtfB-Ih18).
 #### 5. [Circuitry and Programming](#circuitry-and-programming)
 
 ## What we started with ##
-When approached by Cesar to make a demonstration for MetaMorphe, Tim had the idea of making a zoetrobe or stroboscope to present the potential of MetaMorphe to produce keyframes in animation. We decided on a record player because of the already-implemented rotational motion and the size of the turntable.
+When approached by Cesar to make a demonstration for MetaMorphe, Tim had the idea of making a zoetrobe or stroboscope to present the potential of MetaMorphe to produce keyframes in animation. We decided on a record player because of the already-implemented rotational motion and the size of the turntable. 
 We found an inexpensive, used record player on Craigslist that I picked up in Oakland, and took it apart to see how it worked, and how we could modify it to do what we wanted.
 
 #### Built-In Buttons ####
@@ -49,18 +49,18 @@ We found an inexpensive, used record player on Craigslist that I picked up in Oa
 | --------- | ---------- |
 | ![][left] | ![][right] |
 
-On the left side, there is a power button, as well as options for speed, which were intially at 33 and 45 rpm. We initially wanted to display the animation at around 30 fps, which would mean we would have 10 frames on the plate and rotate it at around 150 rpm, but upon seeing the different speeds, decided to also implement a 15 frame plate.
+On the left side, there is a power button, as well as options for speed, which were intially at 33 and 45 rpm. We initially wanted to display the animation at around 24 frames per second (fps). With 10 frames of animation, a 45 rpm turntable would display at 7.5 fps. Therefore, we calculated a necessary speed of 144 to 150 rpm for 10 frames at 24 fps. Upon seeing the different speeds, we then calculated the proportioned number of frames for the 33 rpm setting and also implemented a 15 frame plate.
 On the right side, there is a start/stop button for the turntable, as well as pitch control, which alters the rotational speed of the turntable slightly. There is also the yellow button I added in to turn the strobe light on and off.
 
 ![][built in]
 
-Looking at the internals of the record player, we found an analog circuit board with a 12v regulator, which was coincidental because Tim had a 12v xenon flash on hand, and so we could power the flash without an additional power source.
+Looking at the internals of the record player, we found an analog circuit board with a 12v regulator, which was coincidental because Tim had a 12v xenon flash on hand, and so we could power the flash without an additional power source. The 12V regulator was speced to handle steady current output of 1A, which we estimated to be enough current to power both the motor and the strobe.
 
 ## Cog ##
 
 ![][cog]
 
-Because we wanted to spin the turntable at three times its default speeds, we decided that instead of replacing the motor, we could simply fit a larger cog over the existing one, which would increase the speed of the larger turntable. Tim designed and 3D printed the new cog, shown above.
+Because we wanted to spin the turntable at three times its default speeds, we decided that instead of replacing the motor, we could simply fit a larger pully over the existing one, which would increase the speed of the larger turntable. Tim measured the diameter of the existing pulley and then tripled its size on the 3D printed retrofit. The Solidworks [file](./stroboscope-cog-rev1.SLDPRT) is in the repository. An explanation of crowned pulleys can be found [here](http://woodgears.ca/bandsaw/crowned_pulleys.html)
 
 ## Flash ##
 
@@ -70,7 +70,9 @@ Because of the limitations of the record player's power supply, we needed a way 
 
 ![][flash]
 
-In addition to powering the strobe light with the record player's power supply and controlling it with the Arduino, we also had to position it to flash onto the models. We did this by replacing the record player's needle with a laser cut mount for the flash.
+The strobe light is an on-demand power strobe. It charges an 800 V capacitor from a 12 V power supply then discharges from a trigger signal between 5V and 12V. We triggered the stobe with a transistor connected to an Arduino digital output pin. The current draw of the strobe is determined by the triggering frequency, which was approximately 0.4 A for our 24 fps application. Tim had the strobe module lying around from a previous project, it can be purchased as an assembled module from [xenonflashtubes.com](http://www.xenonflashtubes.com/12v-power-strobe.html)
+
+In addition to powering the strobe light with the record player's power supply and controlling it with the Arduino, we had to position it illuminate the animation. We did this by replacing the record player's needle with a laser cut mount for the flash. 
 
 ## Speed Control ##
 

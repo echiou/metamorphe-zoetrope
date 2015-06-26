@@ -1,5 +1,5 @@
 # MetaMorphe Zoetrope #
-#### By: [Timothy Campbell](http://github.com/timcam) and [Ethan Chiou](http://github.com/echiou) ####
+#### By: [Tim Campbell](http://github.com/timcam) and [Ethan Chiou](http://github.com/echiou) ####
 
 ![][main]
 
@@ -9,6 +9,7 @@ A video can be found [here](https://youtu.be/nmKtfB-Ih18).
 
 ## How To Run It ##
 - Press power button to turn record player on.
+- Ensure the strobe off before proceeding
 - Select appropriate speed:
     - "33" for 15 frame animations.
     - "45" for 10 frame animations.
@@ -16,7 +17,11 @@ A video can be found [here](https://youtu.be/nmKtfB-Ih18).
 - Accelerate the turntable using the start/stop button.
     - Ensure the turntable reaches full speed before turning on the strobe.
 - Turn on the strobe with the yellow button on the side of the case.
-- When you are done using the zoetrope, turn off the strobe for the next user.
+- Tune the speed of the animation with the pitch fader
+- When you are done using the zoetrope:
+	- Turn off the strobe
+	- Turn off the turntable
+	- Turn off power
 
 #### Notes ####
 

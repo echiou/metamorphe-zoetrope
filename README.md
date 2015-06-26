@@ -26,7 +26,7 @@ A video can be found [here](https://youtu.be/nmKtfB-Ih18).
 #### Notes ####
 
 - .svg files for [10](./record-10.svg) and [15](./record-15.svg) frame plates can be found in the repository.
-- .stl file for the [cog](./stroboscope-cog-rev1.stl) is found in the repository
+- .stl file for the [cog](./stroboscope-cog-rev1.STL) is found in the repository
 - .dxf files for the strobe enclosure found in the [strobe-mount](./strobe-mount) folder in the repository
 - The turntable must reach full speed before you turn on the strobe because  firing the strobe light and accelerating the turntable simultaneously draws too much power.
 

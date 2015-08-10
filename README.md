@@ -45,9 +45,8 @@ When approached by Cesar to make a demonstration for MetaMorphe, Tim had the ide
 We found an inexpensive, used record player on Craigslist that I picked up in Oakland, and took it apart to see how it worked, and how we could modify it to do what we wanted.
 
 #### Built-In Buttons ####
-| Left      | Right      |
-| --------- | ---------- |
-| ![][left] | ![][right] |
+![][left]
+![][right]
 
 On the left side, there is a power button, as well as options for speed, which were intially at 33 and 45 rpm. We initially wanted to display the animation at around 24 frames per second (fps). With 10 frames of animation, a 45 rpm turntable would display at 7.5 fps. Therefore, we calculated a necessary speed of 144 to 150 rpm for 10 frames at 24 fps. Upon seeing the different speeds, we then calculated the proportioned number of frames for the 33 rpm setting and also implemented a 15 frame plate.
 On the right side, there is a start/stop button for the turntable, as well as pitch control, which alters the rotational speed of the turntable slightly. There is also the yellow button I added in to turn the strobe light on and off.
@@ -80,9 +79,7 @@ In order to find the speed at which the turntable was spinning (and thus at what
 
 #### Different Built-in Speeds ####
 
-| "33 rpm"    | "45 rpm"    |
-| ----------- | ----------- |
-| ![][33 rpm] | ![][45 rpm] |
+![][33 rpm] ![][45 rpm]
 
 The record player also came with two default speeds, the faster of which we used for 10 frame animations (and would thus fire the flash at around 30 fps). We also decided to take advantage of the slower speed and use it for 15 frame animations. To do this, we had to be able to detect at what rate the turntable was spinning.
 
